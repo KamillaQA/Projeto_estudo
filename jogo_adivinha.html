@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(numero){
+        return Math.round(Math.random() * numero);
+        
+    }
+    
+    var numeroPensado = sorteia(10); 
+    var tentativas = 1;
+    while(tentativas <=3 ) {
+
+            var chute = parseInt(prompt("Qual é o número? "));
+        
+        if (chute == numeroPensado){
+            document.write("Acertou miseravi. O seu é igual ao que foi pensado");
+            break;
+        } else {
+                mostra("Não foi desta vez!");
+                if (numeroPensado < chute) {
+                    mostra("O seu número é menor do que eu pensei!");
+                }else{
+                    mostra("O seu número é maior do que eu pensei!");
+                }
+        }
+        tentativas++;
+    }
+    mostra("fim");
+</script>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+    function mostra(frase){
+        document.write("Os pontos do seu time são " + frase);
+          pulaLinha();
+          if (frase > 28) {
+        document.write("Seu time esta pior que ano passado");}
+          if (frase < 28) {
+        document.write("Seu time esta melhor que ano passado");}
+          if (frase == 28) {
+        document.write("Seu time esta igual que ano passado");}
+    }
+
+var vitorias = parseInt(prompt("Qual é o número de vitorias? "));
+var empates = parseInt(prompt("Qual é o número de empates? "));
+
+var pontos = vitorias * 2 + empates; 
+
+mostra(pontos); 
+
+
+</script>
